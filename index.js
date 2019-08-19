@@ -1,5 +1,5 @@
-import axios from 'axios';
-import * as moment from 'moment';
+const axios = require('axios');
+const moment = require('moment');
 
 /**
  * Configures request params and Get events from loacalist api.
