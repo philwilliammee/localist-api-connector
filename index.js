@@ -8,7 +8,7 @@ import * as moment from 'moment';
  *
  * @return {axios} A axios promise;
  */
-const findAll = ({
+module.exports = ({
     depts = '0',
     entries = 3,
     format = 'standard',
@@ -47,5 +47,3 @@ const findAll = ({
     const url = '//events.cornell.edu/api/2.1/events';
     return axios.get(url, { params });
 };
-
-export default findAll;
