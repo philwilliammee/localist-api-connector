@@ -14,7 +14,8 @@ module.exports = ({
     format = 'standard',
     group = 0,
     keyword = '',
-    api_key = ''
+    api_key = '',
+    url = '//events.cornell.edu/api/2.1/events'
 }) => {
     const params = {
         api_key,
@@ -44,6 +45,5 @@ module.exports = ({
     if (format === 'archive') {
         params.direction = 'desc';
     }
-    const url = '//events.cornell.edu/api/2.1/events';
     return axios.get(url, { params });
 };
